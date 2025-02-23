@@ -1,0 +1,34 @@
+
+import 'package:flutter/material.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage ({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage>{
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: _criarAppBar(),
+      body: Container()//_criarbody(),
+    );
+  }
+
+  AppBar _criarAppBar(){
+    return AppBar(
+      title: Text('Atividade - Interface'),
+      actions: [
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.sync),
+        ),
+      ],
+
+    );
+  }
+
+}
