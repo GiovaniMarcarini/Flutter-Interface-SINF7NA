@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,13 +16,15 @@ class _HomePageState extends State<HomePage>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: _criarAppBar(),
-      body: Container()//_criarbody(),
+      body: _criarbody(),
     );
   }
 
   AppBar _criarAppBar(){
     return AppBar(
+      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Text('Atividade - Interface'),
+      centerTitle: true,
       actions: [
         IconButton(
             onPressed: () {},
@@ -28,6 +32,29 @@ class _HomePageState extends State<HomePage>{
         ),
       ],
 
+    );
+  }
+
+  Widget _criarbody() {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+                child: Card(
+                  color: Colors.primaries[Random().
+                  nextInt(Colors.primaries.length)],
+                  child: SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: Text('Linha 1 | Coluna 1'),
+                    ),
+                  ),
+                )
+            )
+          ],
+        )
+      ],
     );
   }
 
