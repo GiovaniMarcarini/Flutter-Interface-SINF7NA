@@ -38,43 +38,16 @@ class _HomePageState extends State<HomePage>{
   Widget _criarbody() {
     return Column(
       children: [
-        Row(
+        const Row(
           children: [
             Expanded(
-                child: Card(
-                  color: Colors.primaries[Random().
-                  nextInt(Colors.primaries.length)],
-                  child: const SizedBox(
-                    height: 80,
-                    child: Center(
-                      child: Text('Linha 1 | Coluna 1'),
-                    ),
-                  ),
-                )
+                child: CustomCard(label: "Linha 1 | Coluna 1",)
             ),
             Expanded(
-                child: Card(
-                  color: Colors.primaries[Random().
-                  nextInt(Colors.primaries.length)],
-                  child: const SizedBox(
-                    height: 80,
-                    child: Center(
-                      child: Text('Linha 1 | Coluna 2'),
-                    ),
-                  ),
-                )
+                child: CustomCard(label: "Linha 1 | Coluna 2",)
             ),
             Expanded(
-                child: Card(
-                  color: Colors.primaries[Random().
-                  nextInt(Colors.primaries.length)],
-                  child: const SizedBox(
-                    height: 80,
-                    child: Center(
-                      child: Text('Linha 1 | Coluna 3'),
-                    ),
-                  ),
-                )
+                child: CustomCard(label: "Linha 1 | Coluna 3",)
             )
           ],
         ),
@@ -100,7 +73,7 @@ class _HomePageState extends State<HomePage>{
                 child: Card(
                   color: Colors.primaries[Random().
                   nextInt(Colors.primaries.length)],
-                  child: const SizedBox(
+                  child:  const SizedBox(
                     height: 80,
                     child: Center(
                       child: Text('Linha 3 | Coluna 1'),
@@ -114,4 +87,23 @@ class _HomePageState extends State<HomePage>{
     );
   }
 
+}
+
+class CustomCard extends StatelessWidget{
+  final String label;
+
+  const CustomCard({Key? key, required this.label}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context){
+    return Card(
+      color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
+      child: SizedBox(
+        height: 80,
+        child: Center(
+          child: Text(label),
+        ),
+      ),
+    );
+  }
 }
