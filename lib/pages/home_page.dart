@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage>{
       centerTitle: true,
       actions: [
         IconButton(
-            onPressed: () {},
+            onPressed: () => setState(() {}),
             icon: const Icon(Icons.sync),
         ),
       ],
@@ -44,10 +44,66 @@ class _HomePageState extends State<HomePage>{
                 child: Card(
                   color: Colors.primaries[Random().
                   nextInt(Colors.primaries.length)],
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: 80,
                     child: Center(
                       child: Text('Linha 1 | Coluna 1'),
+                    ),
+                  ),
+                )
+            ),
+            Expanded(
+                child: Card(
+                  color: Colors.primaries[Random().
+                  nextInt(Colors.primaries.length)],
+                  child: const SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: Text('Linha 1 | Coluna 2'),
+                    ),
+                  ),
+                )
+            ),
+            Expanded(
+                child: Card(
+                  color: Colors.primaries[Random().
+                  nextInt(Colors.primaries.length)],
+                  child: const SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: Text('Linha 1 | Coluna 3'),
+                    ),
+                  ),
+                )
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+                child: Card(
+                  color: Colors.primaries[Random().
+                  nextInt(Colors.primaries.length)],
+                  child: const SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: Text('Linha 2 | Coluna 1'),
+                    ),
+                  ),
+                )
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+                child: Card(
+                  color: Colors.primaries[Random().
+                  nextInt(Colors.primaries.length)],
+                  child: const SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: Text('Linha 3 | Coluna 1'),
                     ),
                   ),
                 )
