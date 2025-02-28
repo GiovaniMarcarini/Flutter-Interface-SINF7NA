@@ -36,9 +36,10 @@ class _HomePageState extends State<HomePage>{
   }
 
   Widget _criarbody() {
-    return Column(
+    return ListView(
+      //Column(
       children: [
-        for (int i = 0; i < (Random().nextInt(10) + 5 ); i++)
+        for (int i = 0; i < (Random().nextInt(20) + 5 ); i++)
           Row(
             children: [
               for (int j = 0; j < (Random().nextInt(5) + 1 ); j++)
