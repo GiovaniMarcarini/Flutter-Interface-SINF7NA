@@ -38,55 +38,18 @@ class _HomePageState extends State<HomePage>{
   Widget _criarbody() {
     return Column(
       children: [
-        const Row(
-          children: [
-            Expanded(
-                child: CustomCard(label: "Linha 1 | Coluna 1",)
-            ),
-            Expanded(
-                child: CustomCard(label: "Linha 1 | Coluna 2",)
-            ),
-            Expanded(
-                child: CustomCard(label: "Linha 1 | Coluna 3",)
-            )
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-                child: Card(
-                  color: Colors.primaries[Random().
-                  nextInt(Colors.primaries.length)],
-                  child: const SizedBox(
-                    height: 80,
-                    child: Center(
-                      child: Text('Linha 2 | Coluna 1'),
-                    ),
-                  ),
+        for (int i = 0; i < (Random().nextInt(10) + 5 ); i++)
+          Row(
+            children: [
+              for (int j = 0; j < (Random().nextInt(5) + 1 ); j++)
+                Expanded(
+                    child: CustomCard(label: 'Linha ${i+1} | Coluna ${j+1}',)
                 )
-            )
-          ],
-        ),
-        Row(
-          children: [
-            Expanded(
-                child: Card(
-                  color: Colors.primaries[Random().
-                  nextInt(Colors.primaries.length)],
-                  child:  const SizedBox(
-                    height: 80,
-                    child: Center(
-                      child: Text('Linha 3 | Coluna 1'),
-                    ),
-                  ),
-                )
-            )
-          ],
-        )
+            ],
+          )
       ],
     );
   }
-
 }
 
 class CustomCard extends StatelessWidget{
